@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Counter</title>
+    <style>
+    body {
+        font-family:"Gill Sans", "Gill Sans MT", Sans-Serif;
+    }
+    .container {
+        width:400px;
+        margin:120px auto 0px auto;
+    }
+    h1 {
+        width:400px;
+        margin-bottom:12px;
+        text-align:center;
+        color:#ff4b33;
+        font-size:40px;
+        padding-bottom:8px;
+        border-bottom:2px solid #ff4b33;
+    }
+    h2 {
+        width:400px;
+        margin-bottom:12px;
+        text-align:center;
+        color:#00000;
+        font-size:30px;
+        padding-bottom:8px;
+    }
+    input {
+        display:block;
+        float:left;
+        padding:8px;
+        font-size:16px;
+    }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <em> <h2>Today is <%= Time.now.strftime('%A, %B %d %Y %H:%M:%S') %></h2> </em>
+            <em> <h1>Page Counter(<%= @count %>):</h1> </em>
+                <form method="post" action="/">
+            <input class='btn btn-primary' type='submit' value='Click to Count'>
+        </form>
+    </div>
+</body>
+
+
