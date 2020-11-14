@@ -13,3 +13,4 @@ bundle install
 # sinatra will block vagrant port-forwarding unless explicitly binded to 0.0.0.0 below
 # daemonize sinatra app so provisioning exits
 nohup ruby /vagrant/sinatra.rb -o 0.0.0.0 0<&- &>/dev/null &
+echo "http://$(hostname -I|cut -f2 -d ' '):4567"
