@@ -8,7 +8,7 @@ which git ruby ruby-dev &>/dev/null || {
 
 su - vagrant
 cd /vagrant
-gem install bundler
+sudo gem install bundler
 bundle install
 # sinatra will block vagrant port-forwarding unless explicitly binded to 0.0.0.0 below
 # daemonize sinatra app so provisioning exits
